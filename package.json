@@ -74,5 +74,5 @@
         "prepare-release": "One-step: clean, build, test, and prep a release"
     },
     "typings": "index.d.ts",
-    "version": "0.0.3"
+    "version": "0.0.4"
 }
