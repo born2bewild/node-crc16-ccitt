@@ -102,15 +102,12 @@ napi_value crc16ccitt(napi_env env, napi_callback_info info){
           0x17, 0x36, 0x55, 0x74, 0x93, 0xb2, 0xd1, 0xf0,
         };
         uint64_t hi=0x0000000000000000, lo=0x0000000000000000;
-        uint8_t index;
         uint64_t iterator;
-
-       for(iterator = 0; iterator < dataLength; ++iterator) {
-         index = (hi ^ data[iterator]);
-         hi = lo ^ crc16htab[index];
-         lo = crc16ltab[index];
-       }
-
+        for(iterator = 0; iterator < dataLength; ++iterator) {
+          uint8_t index = (hi ^ data[iterator]);
+          hi = lo ^ crc16htab[index];
+          lo = crc16ltab[index];
+        }
         uint64_t sum = (hi << 8) | lo;
         return toBuffer(env, sum, 16);
 }
