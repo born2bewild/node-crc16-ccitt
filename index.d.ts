@@ -4,5 +4,5 @@ declare module "@wawit/crc16-ccitt" {
      * @param {Buffer!} data
      * @returns {Buffer | boolean} If there is any error in the computation, it will return false.
      */
-    export function crc16ccitt(data: Buffer): Buffer | boolean;
+    export default (data: Buffer): Buffer | boolean;
 }
