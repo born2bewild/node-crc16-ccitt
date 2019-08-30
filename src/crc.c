@@ -103,9 +103,10 @@ napi_value crc16ccitt(napi_env env, napi_callback_info info){
         };
         uint64_t hi=0x0000000000000000, lo=0x0000000000000000;
         uint8_t index;
+        uint64_t iterator;
 
-       for(uint64_t i = 0; i < dataLength; ++i) {
-         index = (hi ^ data[i]);
+       for(iterator = 0; iterator < dataLength; ++iterator) {
+         index = (hi ^ data[iterator]);
          hi = lo ^ crc16htab[index];
          lo = crc16ltab[index];
        }

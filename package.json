@@ -28,7 +28,7 @@
         "trash-cli": "^3.0.0"
     },
     "engines": {
-        "node": ">=6.0.0"
+        "node": ">=9.0.0"
     },
     "gypfile": true,
     "homepage": "https://github.com/born2bewild/node-crc16-ccitt#readme",
@@ -42,7 +42,7 @@
     ],
     "license": "MIT",
     "main": "index.js",
-    "name": "crc16-ccitt",
+    "name": "@wawit/crc16-ccitt",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/magiclen/node-crc.git"

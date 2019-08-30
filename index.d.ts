@@ -1,4 +1,4 @@
-declare module "node-crc" {
+declare module "@wawit/crc16-ccitt" {
     /**
      * bits = 16, reflection = false, exp = 0x0000000000000000, ini = 0x0000000000000000, fix = 0x0000000000000000
      * @param {Buffer!} data
