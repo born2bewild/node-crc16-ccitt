@@ -1,0 +1,78 @@
+{
+    "author": {
+        "name": "Lukas Wawrzyniak",
+        "email": "lw@wawit.net"
+    },
+    "description": "To compute CRC16-CCITT values.",
+    "dependencies": {
+        "bindings": "^1.3.0"
+    },
+    "devDependencies": {
+        "@bitjson/npm-scripts-info": "^1.0.0",
+        "@types/jest": "^24.0.17",
+        "@types/node": "^12.7.1",
+        "codecov": "^3.5.0",
+        "cz-conventional-changelog": "^2.1.0",
+        "eslint": "^6.1.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-config-prettier": "^6.0.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jest": "^22.15.1",
+        "eslint-plugin-prettier": "^3.1.0",
+        "gh-pages": "^2.0.1",
+        "jest": "^24.9.0",
+        "npm-run-all": "^4.1.5",
+        "open-cli": "^5.0.0",
+        "prettier": "^1.18.2",
+        "standard-version": "^6.0.1",
+        "trash-cli": "^3.0.0"
+    },
+    "engines": {
+        "node": ">=6.0.0"
+    },
+    "gypfile": true,
+    "homepage": "https://github.com/born2bewild/node-crc16-ccitt#readme",
+    "keywords": [
+        "nodejs",
+        "crc16",
+        "crc16-ccitt",
+        "ccitt",
+        "crc-ccitt",
+        "posnet"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "name": "crc16-ccitt",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/magiclen/node-crc.git"
+    },
+    "scripts": {
+        "gyp:rebuild": "node-gyp rebuild",
+        "describe": "npm-scripts-info",
+        "fix": "run-s fix:*",
+        "fix:prettier": "prettier \"./**/*.js\" --write",
+        "fix:lint": "eslint . --fix --ext .js ",
+        "test": "run-s test:*",
+        "test:lint": "eslint . --cache --ext .js && prettier \"./**/*.js\" --list-different",
+        "test:unit": "jest",
+        "cov": "jest --coverage",
+        "version": "standard-version",
+        "reset": "git clean -dfx && git reset --hard && npm i",
+        "prepare-release": "run-s reset test cov version"
+    },
+    "scripts-info": {
+        "info": "Display information about the package scripts",
+        "build": "Clean and rebuild the project",
+        "fix": "Try to automatically fix any linting problems",
+        "test": "Lint and unit test the project",
+        "watch": "Watch and rebuild the project on save, then rerun relevant tests",
+        "cov": "Rebuild, run tests, then create and open the coverage report",
+        "doc:json": "Generate API documentation in typedoc JSON format",
+        "version": "Bump package.json version, update CHANGELOG.md, tag release",
+        "reset": "Delete all untracked files and reset the repo to the last commit",
+        "prepare-release": "One-step: clean, build, test, and prep a release"
+    },
+    "typings": "index.d.ts",
+    "version": "0.0.1"
+}

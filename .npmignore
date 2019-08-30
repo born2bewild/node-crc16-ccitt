@@ -1,0 +1,10 @@
+src
+test
+.travis.yml
+.github
+.prettierignore
+.vscode
+build/docs
+**/*.spec.*
+coverage
+*.log
